@@ -1,0 +1,111 @@
+@import "animation.css";
+body {
+    margin: 0;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+section {
+    display: grid;
+    grid-template: repeat(8, calc(100vh/8)) / repeat(12, calc(100vw/12));
+}
+section div {
+    border: 1px solid rgba(0, 0, 0, 0.62);
+    transform-style: preserve-3d
+}
+.fon_one_speed, #main {
+    animation: fon_an 6s infinite alternate-reverse;
+    animation-timing-function: ease-in;
+}
+.fon_two_speed, #photogallery, #contacs {
+    animation: fon_an 4s infinite alternate-reverse;
+}
+.fon_three_speed, #portfolio {
+    animation: fon_an 2s infinite alternate-reverse;
+    animation-timing-function: linear;
+}
+#main {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+}
+#photogallery {
+    grid-column: 5 / 6;
+    grid-row: 3 / 6;
+}
+#portfolio {
+    grid-column: 7 / 9;
+    grid-row: 6 / 7;
+}
+#contacs {
+    grid-column: 9 / 11;
+    grid-row: 4 / 5;
+}
+#main, #portfolio, #contacs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+#photogallery p {
+    position: relative;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 1.3em;
+}
+#photogallery:hover {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 4em);
+    box-shadow: 18px -19px 59px -7px rgba(0,0,0,0.35);
+    transition: 1s;
+    animation: color_radyga 2s infinite alternate-reverse;
+}
+#contacs:hover {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 2em);
+    box-shadow: -30px -5px 59px -7px rgba(0,0,0,0.35);
+    transition: 1s;
+    animation: color_radyga 2s infinite alternate-reverse;
+}
+#main:hover {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 1.5em);
+    box-shadow: 30px -5px 59px -7px rgba(0,0,0,0.35);
+    transition: 1s;
+    animation: color_radyga 2s infinite alternate-reverse;
+}
+#portfolio:hover {
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 2em);
+    box-shadow: -30px -5px 59px -7px rgba(0,0,0,0.35);
+    transition: 1s;
+    animation: color_radyga 2s infinite alternate-reverse;
+}
+
+.right_bord { /*photogallery, main*/
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transform-origin: right center;
+    transform: rotateY(-90deg);
+    background-color: rgb(79, 82, 110);
+}
+.left_bord { /*contacs*/
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    background-color: rgb(79, 82, 110);
+}
+.top_bord { /*portfolio*/
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    background-color: rgb(79, 82, 110);
+}
