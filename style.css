@@ -13,15 +13,16 @@ section div {
     transform-style: preserve-3d
 }
 .fon_one_speed, #main {
-    animation: fon_an 6s infinite alternate-reverse;
+    animation: fon_an 4s infinite alternate-reverse;
     animation-timing-function: ease-in;
 }
 .fon_two_speed, #photogallery, #contacs {
-    animation: fon_an 4s infinite alternate-reverse;
-}
-.fon_three_speed, #portfolio {
     animation: fon_an 2s infinite alternate-reverse;
     animation-timing-function: linear;
+}
+.fon_three_speed, #portfolio {
+    animation: fon_an 3s infinite alternate-reverse;
+    animation-timing-function: ease-out;
 }
 #main {
     grid-column: 2 / 4;
@@ -78,8 +79,8 @@ section div {
 #portfolio:hover {
     width: 100%;
     height: 100%;
-    transform: translate3d(0, 0, 2em);
-    box-shadow: -30px -5px 59px -7px rgba(0,0,0,0.35);
+    transform: translate3d(0, 0, 3.5em);
+    box-shadow: -30px -15px 59px -7px rgba(0,0,0,0.35);
     transition: 1s;
     animation: color_radyga 2s infinite alternate-reverse;
 }
